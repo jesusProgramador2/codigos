@@ -1,33 +1,46 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void impresion(char *,int);
-struct sueldos
-{
-    int sueldo;
-    char nombre[30];
-};
 
+
+struct datos
+{
+    char nombre[30];
+    int salario;
+    
+}*pun;
 
 int main()
 {
-    FILE *parchivo;
-    int i, cont;
-    parchivo = fopen("sueldos.txt","r");
-    for ( i = 0; i < cont; i++)
+    FILE *parch;
+    int i, temp, mayor=0, n;  
+    pun = (struct datos*) malloc(n * sizeof(struct datos));
+    parch = fopen("archivo.txt","r"); //
+    while (temp != 0)
     {
-        
+        fscanf(parch, "%i", &temp);
+        puts("i");
     }
     
     
-    fclose(parchivo);
-    
+    for ( i = 0; i < 9; i++)
+    {
+        fscanf(parch, "%s %i",&(pun+i)->nombre, &(pun+i)->salario);
+        temp = (pun+i)->salario;
+        
+        if (temp > mayor)
+        {
+            
+            mayor = (pun+i)->salario;    
+        }
+        
+    }
+    fclose(parch);
+    for ( i = 0; i < 9; i++)
+    {
+        printf("lei esto %s %i\n",(pun+i)->nombre,(pun+i)->salario);
+        
+    }
+    printf("el valor mayor es:%i\n",mayor);
     return 0;
-}
-
-
-void impresion(char *leer, int temp)
-{
-
-
 }
