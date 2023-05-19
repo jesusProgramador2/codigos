@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
+void nuevo(struct datos *);
 
 struct datos
 {
@@ -10,20 +10,17 @@ struct datos
     
 }*pun;
 
+int n = 1;
+
 int main()
 {
     FILE *parch;
     int i, temp, mayor=0, n;  
-    pun = (struct datos*) malloc(n * sizeof(struct datos));
-    parch = fopen("archivo.txt","r"); //
-    while (temp != 0)
-    {
-        fscanf(parch, "%i", &temp);
-        puts("i");
-    }
+    pun = (struct datos*) malloc(sizeof(struct datos));
+    parch = fopen("sueldos.txt","r"); //
     
     
-    for ( i = 0; i < 9; i++)
+    for ( i = 0; i < 10; i++)
     {
         fscanf(parch, "%s %i",&(pun+i)->nombre, &(pun+i)->salario);
         temp = (pun+i)->salario;
@@ -36,11 +33,18 @@ int main()
         
     }
     fclose(parch);
-    for ( i = 0; i < 9; i++)
+    for ( i = 0; i < 10; i++)
     {
         printf("lei esto %s %i\n",(pun+i)->nombre,(pun+i)->salario);
         
     }
     printf("el valor mayor es:%i\n",mayor);
     return 0;
+}
+
+
+void nuevo(struct datos *p)
+{
+    n++;
+    p = (struct datos *) realloc(p, sizeof(struct datos) * n);
 }
