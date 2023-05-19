@@ -1,0 +1,10 @@
+carlos 100
+alberto 400
+viviana 1000
+jaime 300
+pedro 675
+daniela 934
+brayan 024
+isabella 493
+ana 89658
+luis 7584

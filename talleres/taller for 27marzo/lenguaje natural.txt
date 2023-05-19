@@ -1,0 +1,32 @@
+INICIO
+    ENTERO numero_datos;
+    IMPRIMIR "Programa que calcula el promedio de los datos ";
+    IMPRIMIR "que ingrese el usuario y hace un promedio con los pares y tambien con los impares";
+    IMPRIMIR "ingrese el numero de datos a promediar";
+    LEER "numero_datos";
+    promedios(numero_datos);
+FIN
+
+INICIO promedios(cont)
+    DECIMAL total_par, total_impar, var2, var3;
+    ENTERO var;
+    cont1 <- 0; cont2 <- 0;
+    PARA I DESDE 0; HASTA I < cont; HAGA INCREMENTO 1
+        IMPRIMIR ingrese valor para el promedio";
+        LEER var;
+        SI var MOD 2 = 0 ENTONCES
+            total_par = total_par + var;
+            cont1 <- cont1 + 1;
+            var2 <- total_par / cont1;
+        FINSI    
+        SI var MOD 2 != 0 ENTONCES
+            total_impar <- total_impar + var;
+            cont2 <- cont2 + 1;
+            var3 = total_impar / cont2;
+        FINSI
+    FINPARA
+    IMPRIMIR "el promedio de los pares es:" 
+    IMPRIMIR var2;
+    IMPRIMIR "y el de los impares es: ";
+    IMPRIMIR var3;
+FINPROMEDIOS            
