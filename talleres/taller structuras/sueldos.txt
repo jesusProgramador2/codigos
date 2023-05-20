@@ -1,4 +1,4 @@
-numero de datos: 10
+numero de datos: 12
 carlos 100
 alberto 400
 viviana 1000
@@ -11,4 +11,4 @@ ana 89658
 luis 7584
 dakota 2414
 mariana 213412
-x
+
