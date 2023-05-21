@@ -16,8 +16,7 @@ main()
     FILE *parch;
     int cont, mayor;  
     struct datos *pun;
-    char pause;
-    puts("programa que lee un archivo txt los nombre y los salario y te dice cual es el mayor");
+    puts("programa que lee un archivo txt los nombre y los salario y te dice cual es el mayor");//mucho texto comentario totalmente innecesario pero necesario para mi salud mental
     puts("el archivo txt debe tener el siguiente formato y debe ser guardado como sueldos.txt");
     puts("[numero de datos: (los datos que tenga el archivo)]\n[nombre salario]");
     puts("ejemplo\nnumero de datos: 2\nIsabella 2000\nMartin 4000");
