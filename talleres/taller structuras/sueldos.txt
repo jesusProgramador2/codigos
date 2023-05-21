@@ -1,14 +1,14 @@
 numero de datos: 12
-carlos 100
-alberto 400
-viviana 1000
-jaime 300
-pedro 675
-daniela 934
-brayan 024
-isabella 493
-ana 89658
-luis 7584
-dakota 2414
-mariana 213412
+carlos 20000
+alberto 45000
+viviana 10000
+jaime 140000
+pedro 1160000
+daniela 500000
+brayan 362000
+isabella 785000
+ana 40000
+luis 6000000
+dakota 796000
+mariana 4450000
 
