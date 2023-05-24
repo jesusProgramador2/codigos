@@ -1,7 +1,5 @@
 #include"galletas.h"
 
-
-
 int main()
 {
     FILE *p;
