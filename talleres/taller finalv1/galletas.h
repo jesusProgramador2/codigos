@@ -50,7 +50,45 @@
         {
             x = rand() % 5;
             y = rand() % 5;
-            tabla[x][y] = 'G';   
+            while (tabla[x][y] == 'O')
+            {
+                x = rand() % 5;
+                y = rand() % 5;
+            }
+            tabla[x][y] = 'O';
+
         }
     }   
+    void posicion(char tabla[5][5], int posicion[])
+    {
+        int x, y;
+        x = rand() % 5;
+        y = rand() % 5;
+        while (tabla[x][y] == 'O')
+            {
+                x = rand() % 5;
+                y = rand() % 5;
+            }
+        tabla[x][y] = 'G';
+        posicion[0] = x;
+        posicion[1] = y;
+    }
+    void movimiento(char tabla[5][5], int pos[2])
+    {
+        int x,y, temp;
+        
+        x = rand() % 2;
+        if (temp == 0)
+        {
+            x = -1;
+        }
+        y = rand() % 2;
+        if (temp == 0)
+        {
+            y = -1;
+        }
+        
+        
+    }
+
 #endif

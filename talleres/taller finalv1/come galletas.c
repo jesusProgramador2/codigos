@@ -1,23 +1,40 @@
 #include"galletas.h"
+#include<conio.h>
+#include<ctype.h>
 
-
+void inicio(char tabla[5][5], int pos[2]);
 
 int main()
 {
     FILE *p;
-    char tabla[5][5];
+    char tecla, tabla[5][5];
+    int pos[2], puntaje;
     p = fopen("log.txt","a+");
     
-    rellenar(tabla);
-
+    
+    inicio(tabla,pos);
+    
+    do
+    {
+        
+        impcon(tabla);
+        impx(tabla, p);
+        tecla = getch();
+    } while (puntaje == 5 || toascii(tecla) == 27 );
     
     
-    galleta(tabla);
     
-    impcon(tabla);
-    impx(tabla, p);
+    
+    
+    
     printf("buenas");
     
     fclose(p);
     return 0;
+}
+void inicio(char tabla[5][5], int pos[2])
+{
+    rellenar(tabla);
+    galleta(tabla);
+    posicion(tabla, pos);
 }
