@@ -29,9 +29,7 @@
             {
                 printf("%c ",tabla[i][j]);
             }
-            
         }
-        
     }
     void rellenar(char tabla[5][5])
     {
@@ -44,7 +42,7 @@
             }
         }
     }
-    int galleta(char tabla[5][5])
+    void galleta(char tabla[5][5])
     {
         int i, x, y, pointer;
         srand(time(NULL));
@@ -52,9 +50,7 @@
         {
             x = rand() % 5;
             y = rand() % 5;
-            
-            tabla[x][y] = 'G';
+            tabla[x][y] = 'G';   
         }
-        return pointer;
-    }
+    }   
 #endif
