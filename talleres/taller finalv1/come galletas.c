@@ -15,7 +15,7 @@ int main()
     galleta(tabla);
     
     impcon(tabla);
-    
+    impx(tabla, p);
     printf("buenas");
     
     fclose(p);
