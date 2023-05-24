@@ -8,7 +8,6 @@ int main()
     
     rellenar(tabla);
     galleta(tabla);
-    
     impcon(tabla);
     impx(tabla,p);
     printf("buenas");
