@@ -20,7 +20,6 @@
         }   
     }
     void impcon(char tabla[5][5])//funcione que imprime en consola la tabla de manera ordenada
-    //
     {
         int i,j;
         puts("");
@@ -51,28 +50,29 @@
         srand(time(NULL));
         for ( i = 0; i < 5; i++)
         {
-            x = rand() % 5;
-            y = rand() % 5;
-            while (tabla[x][y] == 'O')
+            
+            do
             {
                 x = rand() % 5;
                 y = rand() % 5;
-            }
+            
+            }while (tabla[x][y] == 'O');
+            
             tabla[x][y] = 'O';
-
         }
     }   
     void posicion(char tabla[5][5], int posicion[]) //funcion que designa la posicion inicial de 'G' por medio de aleatorios
     //y revisa si es en la posicion de una galleta para nunca asignar esa posicion inicial
     {
         int x, y;
-        x = rand() % 5;
-        y = rand() % 5;
-        while (tabla[x][y] == 'O')
-            {
-                x = rand() % 5;
-                y = rand() % 5;
-            }
+        
+        do 
+        {
+            x = rand() % 5;
+            y = rand() % 5;
+        
+        }while (tabla[x][y] == 'O');
+        
         tabla[x][y] = 'G';
         posicion[0] = x;
         posicion[1] = y;
@@ -92,8 +92,7 @@
             if (x == 2)
             {
                 x == 0;
-            }
-            
+            }   
             //puts("llegue hasta aqui x");
         }while((pos[0] + x) < 0 || (pos[0] + x) > 4);
             
@@ -107,8 +106,7 @@
             if (y == 2)
             {
                 y = 0;
-        }
-        
+            }
             //puts("llegue hasta aqui y"); //print que me confirmo que el codigo llego hasta aqui fue util para descubirir un errro
         } while ((pos[1] + y) < 0 || (pos[1] + y) > 4);
         pos[0] = pos[0] + x;
@@ -124,16 +122,12 @@
             {
                 if (tabla[i][j] == 'O')
                 {
-                    printf("buenas");
+                    //printf("buenas");
                     cont++;
-                    printf("%i",cont);
-                }
-                
-            }
-            
+                    //printf("%i",cont);
+                }   
+            }   
         }
-        
-        
         return cont;
     }
 #endif
