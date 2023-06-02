@@ -47,7 +47,7 @@
     //y no se repetin nunca por la condicion siempre va a ver 5 galletas en el tablero
     {
         int i, x, y;
-        srand(time(NULL));
+        
         for ( i = 0; i < 5; i++)
         {
             
@@ -91,13 +91,9 @@
             }
             if (x == 2)
             {
-                x == 0;
+                x = 0;
             }   
             //puts("llegue hasta aqui x");
-        }while((pos[0] + x) < 0 || (pos[0] + x) > 4);
-            
-        do
-        {
             y = rand() % 3;
             if (y == 0)
             {
@@ -107,8 +103,15 @@
             {
                 y = 0;
             }
-            //puts("llegue hasta aqui y"); //print que me confirmo que el codigo llego hasta aqui fue util para descubirir un errro
-        } while ((pos[1] + y) < 0 || (pos[1] + y) > 4);
+            if (x == 0 && y == 0)// esta condicion es por si los dos valores son cero que no se queda quieta
+            //la 'G' de esta manera el bucle vuelve a ser random todo y siempre se mueve la 'g'
+            {
+                y = 7;
+                x = 7;
+            }
+                
+        }while((pos[0] + x) < 0 || (pos[0] + x) > 4 || pos[1] + y < 0 || (pos[1] + y) > 4);
+            
         pos[0] = pos[0] + x;
         pos[1] = pos[1] + y;
     }
