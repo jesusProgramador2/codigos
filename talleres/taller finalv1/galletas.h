@@ -50,7 +50,6 @@
         
         for ( i = 0; i < 5; i++)
         {
-            
             do
             {
                 x = rand() % 5;
@@ -61,7 +60,7 @@
             tabla[x][y] = 'O';
         }
     }   
-    void posicion(char tabla[5][5], int posicion[]) //funcion que designa la posicion inicial de 'G' por medio de aleatorios
+    void posicion(char tabla[5][5], int posicion[2]) //funcion que designa la posicion inicial de 'G' por medio de aleatorios
     //y revisa si es en la posicion de una galleta para nunca asignar esa posicion inicial
     {
         int x, y;
@@ -70,7 +69,6 @@
         {
             x = rand() % 5;
             y = rand() % 5;
-        
         }while (tabla[x][y] == 'O');
         
         tabla[x][y] = 'G';
@@ -106,10 +104,10 @@
             if (x == 0 && y == 0)// esta condicion es por si los dos valores son cero que no se queda quieta
             //la 'G' de esta manera el bucle vuelve a ser random todo y siempre se mueve la 'g'
             {
-                y = 7;
-                x = 7;
-            }
-                
+                y = 7;//por eso valores altos para que la condion final los obligue a repetir todo el bucle
+                x = 7;//y el numero es siete porque siete es simbolicamente un numero grande como en le queso 7 cueros
+            }          //no son 7 cueros son muchos y simplemente es un numero que representa que es grande o cuando se dice que dios creo que el mundo es 7 dias
+            //es un numero grande pero simbolicamente 
         }while((pos[0] + x) < 0 || (pos[0] + x) > 4 || pos[1] + y < 0 || (pos[1] + y) > 4);
             
         pos[0] = pos[0] + x;
